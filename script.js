@@ -347,7 +347,7 @@ if (cvDownloadBtn) {
         // Create a temporary link for download
         const link = document.createElement('a');
         link.href = cvUrl;
-        link.download = 'Alan_Toro_CV.pdf';
+        link.download = 'AlanToroCV.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
