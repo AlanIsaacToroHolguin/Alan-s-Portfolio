@@ -137,6 +137,46 @@ html {
             padding-top: 140px;
         }
 
+        .hero img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;          /* Mantiene proporción y recorta suavemente */
+            border-radius: 20px;        /* Bordes redondeados */
+            border: 4px solid #fff;     /* Borde blanco elegante */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            display: block;
+            margin: 0 auto;             /* Centra horizontalmente */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            z-index: 10;
+        }
+        
+        /* 💻 Efecto hover (solo PC) */
+        .hero img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        /* 📱 Responsivo: tablets y móviles */
+        @media (max-width: 768px) {
+            .hero img {
+                width: 180px;
+                height: 180px;
+                border-radius: 15px;
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            }
+        }
+        
+        /* 📱 Extra pequeño (celulares verticales) */
+        @media (max-width: 480px) {
+            .hero img {
+                width: 140px;
+                height: 140px;
+                border-radius: 12px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            }
+        }
+        
+
         .hero::before {
             content: '';
             position: absolute;
@@ -201,6 +241,10 @@ html {
                 transform: translateX(20px) scale(1.05);
             }
         }
+
+
+
+        
 
         .hero-container {
             max-width: 1200px;
@@ -366,6 +410,8 @@ html {
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
+
+      
 }
 
 /* Secciones generales */
