@@ -167,7 +167,7 @@ html {
         }
         
         /* 📱 Extra pequeño (celulares verticales) */
-        @media (max-width: 480px) {
+        @media (max-width: 500px) {
             .hero img {
                 width: 140px;
                 height: 140px;
@@ -379,18 +379,17 @@ html {
 }
 
 .profile-card {
-    width: 230px;
-    height: 260px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    max-width: 350px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.08);
     border-radius: 20px;
+    box-shadow: 0 4px 20px var(--shadow-dark);
+    padding: 2rem;
+    backdrop-filter: blur(10px);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    position: relative;
-    animation: float 6s ease-in-out infinite;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-image {
