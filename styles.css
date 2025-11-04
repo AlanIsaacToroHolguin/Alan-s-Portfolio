@@ -128,7 +128,7 @@ html {
             min-height: 100vh;  
             display: flex;
             align-items: center;
-            background:radial-gradient(circle at 30% 20%, rgba(0, 123, 255, 0.5), rgba(0, 0, 0, 0.7)),url('assets/images/Background.jpg');
+            background:radial-gradient(circle at 30% 20%, rgba(0, 123, 255, 0.5), rgba(0, 0, 0, 0.7)),url('assets/Images/Background.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
