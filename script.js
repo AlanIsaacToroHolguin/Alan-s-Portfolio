@@ -103,33 +103,68 @@ if (statsSection) {
     counterObserver.observe(statsSection);
 }
 
-// Formulario de contacto CON validación
-const contactForm = document.querySelector('.contact-form');
+// ============================================
+// NUEVO: Formulario de contacto con Web3Forms
+// ============================================
+const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
+        
+        // Obtener idioma actual
+        const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+        const t = translations[currentLang].notifications;
         
         // Obtener datos del formulario
         const formData = new FormData(this);
         const name = formData.get('name');
         const email = formData.get('email');
-        const subject = formData.get('_subject'); // ← Cambiar a "_subject"
+        const subject = formData.get('subject');
         const message = formData.get('message');
         
         // Validación básica
         if (!name || !email || !subject || !message) {
-            showNotification('Por favor, completa todos los campos', 'error');
+            showNotification(t.fillFields, 'error');
             return;
         }
         
         if (!isValidEmail(email)) {
-            showNotification('Por favor, ingresa un email válido', 'error');
+            showNotification(t.invalidEmail, 'error');
             return;
         }
         
-        // ✅ SI TODO ESTÁ BIEN, ENVIAR EL FORMULARIO
-        showNotification('Enviando mensaje...', 'info');
-        this.submit(); // ← Esto envía el formulario a FormSubmit
+        // Mostrar mensaje de envío
+        showNotification(t.sending, 'info');
+        
+        // Deshabilitar botón de envío
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = currentLang === 'en' ? 'Sending...' : 'Enviando...';
+        
+        try {
+            // Enviar a Web3Forms
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const data = await response.json();
+            
+            if (data.success) {
+                showNotification(t.success, 'success');
+                this.reset(); // Limpiar formulario
+            } else {
+                showNotification(t.error, 'error');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            showNotification(t.error, 'error');
+        } finally {
+            // Rehabilitar botón
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+        }
     });
 }
 
@@ -341,10 +376,10 @@ if (cvDownloadBtn) {
     cvDownloadBtn.addEventListener('click', function(e) {
         e.preventDefault();
 
-        // Real URL of your CV
-        const cvUrl = 'assets/cv/AlanToroCV.pdf';
+        // URL real de tu CV
+        const cvUrl = 'assets/cv/CV-Alan-Toro.pdf';
         
-        // Create a temporary link for download
+        // Crear link temporal para descarga
         const link = document.createElement('a');
         link.href = cvUrl;
         link.download = 'AlanToroCV.pdf';
@@ -352,15 +387,12 @@ if (cvDownloadBtn) {
         link.click();
         document.body.removeChild(link);
 
-        // Optional notification (if you have a showNotification function)
-        if (typeof showNotification === 'function') {
-            showNotification('CV downloaded successfully', 'success');
-        } else {
-            console.log('CV downloaded successfully');
-        }
+        // Obtener idioma actual para la notificación
+        const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+        const message = translations[currentLang].notifications.cvDownloaded;
+        
+        showNotification(message, 'success');
     });
 }
 
-
 console.log('Portfolio cargado correctamente! 🚀');
-
