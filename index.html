@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,6 +32,17 @@
                     <a href="#contact" class="nav-link">Contact</a>
                 </li>
             </ul>
+            <!-- Selector de Idioma -->
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="en">
+                    <span class="flag-icon">🇺🇸</span>
+                    <span class="lang-text">EN</span>
+                </button>
+                <button class="lang-btn" data-lang="es">
+                    <span class="flag-icon">🇪🇸</span>
+                    <span class="lang-text">ES</span>
+                </button>
+            </div>
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -44,9 +55,7 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">
-                    Hello, I'm Alan Toro</span>
-                </h1>
+                <h1 class="hero-title">Hello, I'm Alan Toro</h1>
                 <h2 class="hero-subtitle">Full Stack Developer</h2>
                 <p class="hero-description">
                     Full Stack Developer passionate about creating exceptional 
@@ -64,7 +73,7 @@
             <div class="hero-image">
                 <div class="profile-card">
                     <div class="profile-image">
-                        <img src="assets/Images/Me.jpg"  alt="Alan Toro - Full Stack Developer" />
+                        <img src="assets/Images/Me.jpg" alt="Alan Toro - Full Stack Developer" />
                     </div>
                 </div>
             </div>
@@ -78,7 +87,7 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        I’m a web developer with over 6 months of experience building modern and scalable web applications. 
+                        I'm a web developer with over 6 months of experience building modern and scalable web applications. 
                         I specialize in both frontend and backend technologies,
                          always striving to learn new tools and enhance my technical skills.
                     </p>
@@ -251,7 +260,7 @@
             <h2 class="section-title">Contact Me</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Let’s Work Together!</h3>
+                    <h3>Let's Work Together!</h3>
                     <p>I am available for freelance projects and new opportunities. Feel free to get in touch. ✅</p>
                     <div class="contact-methods">
                         <div class="contact-method">
@@ -273,8 +282,10 @@
                         <a href="https://www.instagram.com/architect.alan" class="social-link"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <form action="https://formsubmit.co/2f1dc630ed1bfd1377d22f791565e0a1" method="POST">
-                
+                <!-- Formulario SIN correo visible -->
+                <form id="contactForm" class="contact-form" action="https://formsubmit.co/2f1dc630ed1bfd1377d22f791565e0a1" method="POST">
+                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                    
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Name" required>
                     </div>
@@ -282,7 +293,7 @@
                         <input type="email" name="email" placeholder="Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="_subject" placeholder="Subject" required>
+                        <input type="text" name="subject" placeholder="Subject" required>
                     </div>
                     <div class="form-group">
                         <textarea name="message" placeholder="Write your Message" rows="5" required></textarea>
@@ -297,10 +308,12 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+            <p>&copy; 2025 My Portfolio. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- IMPORTANTE: translations.js debe cargarse PRIMERO -->
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
