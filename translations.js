@@ -31,17 +31,17 @@ const translations = {
         // Experience Section
         experience: {
             title: "Experience",
-            role: "Innovation & Development Intern",
+            role: "Junior Software Developer & Intern",
             company: "MAS Global Consulting · Microsoft Partner",
             status: "● Current",
-            period: "Dec 2025 – Present · 5 mo",
+            period: "Dec 2025 – Jun 2026 · 6 mo",
             location: "Medellín, Colombia · On-site",
-            desc: "Completing practical training as a Software Analysis and Development Technician at Más Global Consulting, a Microsoft Partner organization, working primarily within the Microsoft technology ecosystem.",
-            li1: "Documenting software developments to ensure clarity, maintainability, and traceability.",
-            li2: "Supporting the analysis of technical requirements and proposing software solutions for internal clients.",
-            li3: "Assisting in the operation and configuration of cloud platforms within Microsoft Azure, supporting backend services and integrations.",
-            li4: "Evaluating development platforms and supporting maintenance activities, updates, and component installations.",
-            li5: "Supporting the implementation, improvement, and deployment of information systems, integrations, and internal platforms."
+            desc: "Software Developer at Más Global Consulting, a Microsoft Partner organization, specializing in fullstack development, cloud infrastructure, and AI-driven solutions within the Microsoft ecosystem.",
+            li1: "Fullstack Development: Implemented dynamic frontend components using React and TypeScript, integrating them with backend services developed in .NET / C#.",
+            li2: "Generative AI Integration: Led the integration of OpenAI models for internal process automation, improving operational efficiency through applied artificial intelligence.",
+            li3: "Cloud Infrastructure: Managed configuration and deployment of applications in Microsoft Azure, ensuring correct backend service operation and cloud solution scalability.",
+            li4: "CI/CD Pipeline: Optimized software traceability and deployment through Azure DevOps workflows, reducing production errors and improving technical documentation.",
+            li5: "Requirements Analysis: Actively collaborated in gathering technical and functional requirements, translating business needs into software solutions aligned with best practices."
         },
         // Skills Section
         skills: {
@@ -124,17 +124,17 @@ const translations = {
         // Sección Experiencia
         experience: {
             title: "Experiencia",
-            role: "Pasante de Innovación y Desarrollo",
+            role: "Junior Software Developer & Practicante",
             company: "MAS Global Consulting · Microsoft Partner",
             status: "● Actual",
-            period: "Dic 2025 – Presente · 5 meses",
+            period: "Dic 2025 – Jun 2026 · 6 meses",
             location: "Medellín, Colombia · Presencial",
-            desc: "Completando formación práctica como Técnico en Análisis y Desarrollo de Software en Más Global Consulting, una organización Microsoft Partner, trabajando principalmente dentro del ecosistema tecnológico de Microsoft.",
-            li1: "Documentar desarrollos de software para garantizar claridad, mantenibilidad y trazabilidad.",
-            li2: "Apoyar el análisis de requisitos técnicos y proponer soluciones de software para clientes internos.",
-            li3: "Asistir en la operación y configuración de plataformas en la nube dentro de Microsoft Azure, apoyando servicios backend e integraciones.",
-            li4: "Evaluar plataformas de desarrollo y apoyar actividades de mantenimiento, actualizaciones e instalación de componentes.",
-            li5: "Apoyar la implementación, mejora y despliegue de sistemas de información, integraciones y plataformas internas."
+            desc: "Desarrollador de Software en Más Global Consulting, una organización Microsoft Partner, especializado en desarrollo fullstack, infraestructura cloud y soluciones impulsadas por IA dentro del ecosistema Microsoft.",
+            li1: "Desarrollo Fullstack: Implementé componentes dinámicos en el frontend usando React y TypeScript, integrándolos con servicios backend desarrollados en .NET / C#.",
+            li2: "Integración de IA Generativa: Lideré la integración de modelos de OpenAI para la automatización de procesos internos, mejorando la eficiencia operativa mediante IA aplicada.",
+            li3: "Infraestructura Cloud: Gestioné la configuración y despliegue de aplicaciones en Microsoft Azure, asegurando la correcta operación de servicios backend y la escalabilidad en la nube.",
+            li4: "CI/CD: Optimicé la trazabilidad y el despliegue de software mediante flujos de trabajo en Azure DevOps, reduciendo errores en producción y mejorando la documentación técnica.",
+            li5: "Análisis de Requerimientos: Colaboré activamente en el levantamiento de requerimientos técnicos y funcionales, traduciendo necesidades de negocio en soluciones de software alineadas a buenas prácticas."
         },
         // Sección Habilidades
         skills: {
