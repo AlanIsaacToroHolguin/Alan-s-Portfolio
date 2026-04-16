@@ -56,7 +56,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observar elementos para animación
 document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.skill-category, .project-card, .stat-item, .about-text');
+    const animatedElements = document.querySelectorAll('.skill-category, .project-card, .stat-item, .about-text, .experience-card');
     
     animatedElements.forEach(el => {
         el.style.opacity = '0';
@@ -104,64 +104,61 @@ if (statsSection) {
 }
 
 // ============================================
-// NUEVO: Formulario de contacto con Web3Forms
+// EmailJS — Configuración
+// 1. Crea cuenta gratis en https://emailjs.com
+// 2. Add Email Service (Gmail) → copia el Service ID
+// 3. Create Email Template → copia el Template ID
+//    Variables del template: {{from_name}}, {{from_email}}, {{subject}}, {{message}}
+// 4. Account → API Keys → copia el Public Key
 // ============================================
+/* global emailjs */
+const EMAILJS_SERVICE_ID  = 'service_guaqa2e';
+const EMAILJS_TEMPLATE_ID = 'template_he9gamt';
+const EMAILJS_PUBLIC_KEY  = 'TYj6h6StXtxxWqVDb';
+
+emailjs.init(EMAILJS_PUBLIC_KEY);
+
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
-        
-        // Obtener idioma actual
+
         const currentLang = localStorage.getItem('preferredLanguage') || 'en';
         const t = translations[currentLang].notifications;
-        
-        // Obtener datos del formulario
-        const formData = new FormData(this);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const subject = formData.get('subject');
-        const message = formData.get('message');
-        
-        // Validación básica
+
+        const name    = this.querySelector('[name="name"]').value.trim();
+        const email   = this.querySelector('[name="email"]').value.trim();
+        const subject = this.querySelector('[name="subject"]').value.trim();
+        const message = this.querySelector('[name="message"]').value.trim();
+
         if (!name || !email || !subject || !message) {
             showNotification(t.fillFields, 'error');
             return;
         }
-        
         if (!isValidEmail(email)) {
             showNotification(t.invalidEmail, 'error');
             return;
         }
-        
-        // Mostrar mensaje de envío
-        showNotification(t.sending, 'info');
-        
-        // Deshabilitar botón de envío
+
         const submitBtn = this.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
         submitBtn.disabled = true;
         submitBtn.textContent = currentLang === 'en' ? 'Sending...' : 'Enviando...';
-        
+        showNotification(t.sending, 'info');
+
         try {
-            // Enviar a Web3Forms
-            const response = await fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                body: formData
+            await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+                name:    name,
+                email:   email,
+                subject: subject,
+                message: message
             });
-            
-            const data = await response.json();
-            
-            if (data.success) {
-                showNotification(t.success, 'success');
-                this.reset(); // Limpiar formulario
-            } else {
-                showNotification(t.error, 'error');
-            }
-        } catch (error) {
-            console.error('Error:', error);
+            showNotification(t.success, 'success');
+            this.reset();
+        } catch (err) {
+            console.error('EmailJS error:', err);
             showNotification(t.error, 'error');
         } finally {
-            // Rehabilitar botón
             submitBtn.disabled = false;
             submitBtn.textContent = originalText;
         }
@@ -362,6 +359,20 @@ if (isMobile()) {
     document.documentElement.style.setProperty('--animation-duration', '0.3s');
 }
 
+// Active nav section highlight
+const allSections = document.querySelectorAll('section[id]');
+const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+        }
+    });
+}, { threshold: 0.35 });
+
+allSections.forEach(s => sectionObserver.observe(s));
+
 // Resize handler
 window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
@@ -377,7 +388,7 @@ if (cvDownloadBtn) {
         e.preventDefault();
 
         // URL real de tu CV
-        const cvUrl = 'assets/cv/CV-Alan-Toro.pdf';
+        const cvUrl = 'assets/cv/AlanToroCV.pdf';
         
         // Crear link temporal para descarga
         const link = document.createElement('a');
