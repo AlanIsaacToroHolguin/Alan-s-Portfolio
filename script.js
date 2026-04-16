@@ -388,7 +388,7 @@ if (cvDownloadBtn) {
         e.preventDefault();
 
         // URL real de tu CV
-        const cvUrl = 'assets/cv/AlanToroCV.pdf';
+        const cvUrl = 'assets/cv/Desarrollador de Software-Alan Toro.pdf';
         
         // Crear link temporal para descarga
         const link = document.createElement('a');
