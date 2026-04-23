@@ -53,7 +53,7 @@ const translations = {
         },
         // Projects Section
         projects: {
-            title: "Latest Projects",
+            title: "Projects",
             project1: {
                 title: "Microservices Architecture",
                 description: "Designed and implemented a distributed microservices architecture with an API Gateway, independent services using MySQL and MongoDB, and a React frontend consuming the unified API."
