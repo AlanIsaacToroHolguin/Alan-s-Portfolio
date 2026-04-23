@@ -56,15 +56,15 @@ const translations = {
             title: "Latest Projects",
             project1: {
                 title: "Microservices Architecture",
-                description: "Developed a microservices application using MySQL for one service and MongoDB for another."
+                description: "Designed and implemented a distributed microservices architecture with an API Gateway, independent services using MySQL and MongoDB, and a React frontend consuming the unified API."
             },
             project2: {
-                title: "Task Management App (Coming soon)",
-                description: "Developed a Task Management app using the MERN stack"
+                title: "Band & Rehearsal Manager",
+                description: "Fullstack app for musicians to manage bands, schedule rehearsals, track attendance and organize their song repertoire with a kanban-style setlist board."
             },
             project3: {
                 title: "Proximidad App",
-                description: "Outstanding team project from my studies at SENA (National Learning Service): a platform to help users find job opportunities."
+                description: "LinkedIn-inspired professional networking platform built as a team project, designed with improved UX and features to better connect users with job opportunities."
             }
         },
         // Contact Section
@@ -149,15 +149,15 @@ const translations = {
             title: "Últimos Proyectos",
             project1: {
                 title: "Arquitectura de Microservicios",
-                description: "Desarrollé una aplicación de microservicios utilizando MySQL para un servicio y MongoDB para otro."
+                description: "Diseñé e implementé una arquitectura de microservicios distribuida con API Gateway, servicios independientes usando MySQL y MongoDB, y frontend en React consumiendo la API unificada."
             },
             project2: {
-                title: "App de Gestión de Tareas (Próximamente)",
-                description: "Desarrollé una aplicación de gestión de tareas usando el stack MERN"
+                title: "Band & Rehearsal Manager",
+                description: "App fullstack para músicos: gestión de bandas, ensayos, asistencia y repertorio con tablero kanban de setlist."
             },
             project3: {
                 title: "App Proximidad",
-                description: "Proyecto destacado en equipo de mis estudios en SENA (Servicio Nacional de Aprendizaje): una plataforma para ayudar a los usuarios a encontrar oportunidades laborales."
+                description: "Plataforma de networking profesional inspirada en LinkedIn, desarrollada en equipo, con UX mejorada y funcionalidades para conectar mejor a los usuarios con oportunidades laborales."
             }
         },
         // Sección Contacto
