@@ -6,14 +6,13 @@
   body {
     font-family: "Garamond", "Times New Roman", serif;
     font-size: 11pt;
-    line-height: 1.5;
+    line-height: 1.55;
     color: #111;
     max-width: 780px;
     margin: 40px auto;
     padding: 0 40px;
   }
 
-  /* HEADER */
   .header { text-align: center; margin-bottom: 6px; }
   .header h1 {
     font-size: 22pt;
@@ -28,24 +27,12 @@
     font-style: italic;
     margin-bottom: 6px;
   }
-  .header .contact {
-    font-size: 10pt;
-    color: #333;
-  }
+  .header .contact { font-size: 10pt; color: #333; }
   .header .contact a { color: #1a5276; text-decoration: none; }
 
-  hr.thick {
-    border: none;
-    border-top: 2px solid #111;
-    margin: 10px 0 2px 0;
-  }
-  hr.thin {
-    border: none;
-    border-top: 1px solid #aaa;
-    margin: 2px 0 10px 0;
-  }
+  hr.thick { border: none; border-top: 2px solid #111; margin: 10px 0 2px 0; }
+  hr.thin  { border: none; border-top: 1px solid #aaa; margin: 2px 0 10px 0; }
 
-  /* SECTIONS */
   .section-title {
     font-size: 11pt;
     font-weight: bold;
@@ -54,7 +41,6 @@
     margin: 18px 0 0 0;
   }
 
-  /* PROFILE */
   .profile p {
     margin: 6px 0 0 0;
     text-align: justify;
@@ -62,60 +48,29 @@
     color: #222;
   }
 
-  /* EXPERIENCE / EDUCATION rows */
   .entry { margin: 10px 0 0 0; }
   .entry-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
   }
-  .entry-org {
-    font-weight: bold;
-    font-size: 11pt;
-  }
-  .entry-date {
-    font-size: 10pt;
-    color: #444;
-    white-space: nowrap;
-    margin-left: 12px;
-  }
-  .entry-role {
-    font-style: italic;
-    font-size: 10.5pt;
-    color: #222;
-    margin: 1px 0 4px 0;
-  }
-  .entry-location {
-    font-size: 10pt;
-    color: #555;
-    margin-bottom: 5px;
-  }
+  .entry-org   { font-weight: bold; font-size: 11pt; }
+  .entry-date  { font-size: 10pt; color: #444; white-space: nowrap; margin-left: 12px; }
+  .entry-role  { font-style: italic; font-size: 10.5pt; color: #222; margin: 1px 0 4px 0; }
+  .entry-location { font-size: 10pt; color: #555; margin-bottom: 5px; }
 
-  ul.bullets {
-    margin: 4px 0 0 0;
-    padding-left: 18px;
-  }
+  ul.bullets { margin: 4px 0 0 0; padding-left: 18px; }
   ul.bullets li {
     font-size: 10.5pt;
     color: #222;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
     text-align: justify;
   }
 
-  /* SKILLS */
   .skills-table { width: 100%; border-collapse: collapse; margin-top: 6px; }
-  .skills-table td {
-    font-size: 10.5pt;
-    padding: 2px 10px 2px 0;
-    vertical-align: top;
-  }
-  .skills-table td:first-child {
-    font-weight: bold;
-    width: 28%;
-    color: #111;
-  }
+  .skills-table td { font-size: 10.5pt; padding: 2px 10px 2px 0; vertical-align: top; }
+  .skills-table td:first-child { font-weight: bold; width: 28%; color: #111; }
 
-  /* LANGUAGES */
   .lang-row { display: flex; gap: 30px; margin-top: 6px; }
   .lang-item { font-size: 10.5pt; }
   .lang-item strong { color: #111; }
@@ -127,7 +82,7 @@
 </head>
 <body>
 
-<!-- ══ HEADER ══ -->
+<!-- HEADER -->
 <div class="header">
   <h1>Alan Isaac Toro Holguin</h1>
   <div class="title">Full Stack Developer &nbsp;·&nbsp; .NET &nbsp;·&nbsp; React &nbsp;·&nbsp; Azure</div>
@@ -142,22 +97,23 @@
 
 <hr class="thick"><hr class="thin">
 
-<!-- ══ PROFESSIONAL PROFILE ══ -->
+<!-- PROFESSIONAL PROFILE -->
 <div class="section-title">Professional Profile</div>
 <hr class="thin">
 <div class="profile">
   <p>
     Full Stack Developer with hands-on experience at a Microsoft Partner organization, specialized in building
     scalable web applications and backend services using .NET/C#, React, and TypeScript. Proven ability to lead
-    AI-driven integrations using OpenAI models and to manage cloud infrastructure on Microsoft Azure and Azure DevOps.
-    Results-oriented professional with strong analytical skills, effective communication in English, and a consistent
-    focus on delivering high-quality, maintainable software aligned with business objectives.
+    AI-driven integrations using OpenAI models via Azure AI Foundry, and to manage cloud infrastructure on
+    Microsoft Azure and Azure DevOps. Results-oriented professional with strong analytical skills, effective
+    communication in English, and a consistent focus on delivering high-quality, maintainable software
+    aligned with business objectives.
   </p>
 </div>
 
 <hr class="thick" style="margin-top:14px;"><hr class="thin">
 
-<!-- ══ WORK EXPERIENCE ══ -->
+<!-- WORK EXPERIENCE -->
 <div class="section-title">Work Experience</div>
 <hr class="thin">
 
@@ -170,36 +126,36 @@
   <div class="entry-location">Medellín, Colombia &nbsp;·&nbsp; On-site &nbsp;·&nbsp; Microsoft Partner Organization</div>
   <ul class="bullets">
     <li>
-      Lideré la integración de modelos de lenguaje de OpenAI en los flujos internos de la empresa,
-      automatizando procesos manuales y contribuyendo directamente a la mejora de la eficiencia operativa
-      del equipo mediante el uso de inteligencia artificial aplicada.
+      Led the integration of OpenAI models via Azure AI Foundry into internal company workflows,
+      enhancing AI adoption across internal applications and significantly reducing processing times
+      for end users by automating manual processes and improving overall team operational efficiency.
     </li>
     <li>
-      Implementé componentes dinámicos de frontend con React y TypeScript, integrados con servicios
-      backend en .NET/C#, lo que redujo el tiempo de gestión y entrega de perfiles de candidatos
-      por parte del equipo de reclutamiento hacia los clientes de la empresa.
+      Developed dynamic frontend components using React and TypeScript, integrated with .NET/C#
+      backend services, reducing the time required by the recruitment team to manage and deliver
+      candidate profiles and CVs to company clients.
     </li>
     <li>
-      Gestioné la configuración y despliegue de aplicaciones en Microsoft Azure, garantizando la
-      disponibilidad continua de los servicios backend y la escalabilidad de las soluciones
-      en entornos de producción.
+      Managed the configuration and deployment of applications on Microsoft Azure, ensuring
+      continuous availability of backend services and scalability of production solutions,
+      which reduced intermittency issues across internal applications.
     </li>
     <li>
-      Optimicé los flujos de integración y entrega continua (CI/CD) mediante Azure DevOps,
-      reduciendo errores en producción y estableciendo una documentación técnica estandarizada
-      que mejoró la trazabilidad del ciclo de desarrollo del equipo.
+      Optimized CI/CD pipelines using Azure DevOps, reducing production errors and establishing
+      standardized technical documentation that improved development lifecycle traceability
+      across the internal team.
     </li>
     <li>
-      Colaboré activamente en el levantamiento de requerimientos técnicos y funcionales con
-      clientes internos, traduciendo necesidades de negocio en especificaciones de software
-      alineadas a buenas prácticas y entregadas dentro de los plazos acordados.
+      Actively collaborated in gathering technical and functional requirements with internal
+      stakeholders, translating business needs into software specifications aligned with
+      best practices and delivered within agreed timelines.
     </li>
   </ul>
 </div>
 
 <hr class="thick" style="margin-top:14px;"><hr class="thin">
 
-<!-- ══ EDUCATION ══ -->
+<!-- EDUCATION -->
 <div class="section-title">Education</div>
 <hr class="thin">
 
@@ -208,7 +164,7 @@
     <div class="entry-org">SENA — Servicio Nacional de Aprendizaje</div>
     <div class="entry-date">2024 – 2026</div>
   </div>
-  <div class="entry-role">Tecnólogo en Análisis y Desarrollo de Software</div>
+  <div class="entry-role">Technologist in Software Analysis and Development</div>
   <div class="entry-location">Medellín, Colombia</div>
 </div>
 
@@ -217,13 +173,13 @@
     <div class="entry-org">IE PABS Sabaneta</div>
     <div class="entry-date">2017 – 2022</div>
   </div>
-  <div class="entry-role">Bachiller Académico</div>
+  <div class="entry-role">High School Diploma — Academic Track</div>
   <div class="entry-location">Sabaneta, Antioquia, Colombia</div>
 </div>
 
 <hr class="thick" style="margin-top:14px;"><hr class="thin">
 
-<!-- ══ TECHNICAL SKILLS ══ -->
+<!-- TECHNICAL SKILLS -->
 <div class="section-title">Technical Skills</div>
 <hr class="thin">
 
@@ -238,7 +194,7 @@
   </tr>
   <tr>
     <td>Cloud &amp; DevOps</td>
-    <td>Microsoft Azure, Azure DevOps (CI/CD), Docker, Git, GitHub</td>
+    <td>Microsoft Azure, Azure AI Foundry, Azure DevOps (CI/CD), Docker, Git, GitHub</td>
   </tr>
   <tr>
     <td>Databases</td>
@@ -252,7 +208,7 @@
 
 <hr class="thick" style="margin-top:14px;"><hr class="thin">
 
-<!-- ══ FEATURED PROJECTS ══ -->
+<!-- FEATURED PROJECTS -->
 <div class="section-title">Featured Projects</div>
 <hr class="thin">
 
@@ -263,7 +219,8 @@
   </div>
   <div class="entry-role">React · TypeScript · ASP.NET Core · SQL Server · Azure</div>
   <ul class="bullets">
-    <li>Fullstack application for musicians to manage bands, schedule rehearsals, track attendance and organize their song repertoire with a kanban-style setlist board and real-time dashboard.</li>
+    <li>Fullstack application for musicians to manage bands, schedule rehearsals, track attendance,
+    and organize their song repertoire with a kanban-style setlist board and real-time dashboard.</li>
   </ul>
 </div>
 
@@ -274,7 +231,8 @@
   </div>
   <div class="entry-role">React · Node.js · MongoDB · MySQL</div>
   <ul class="bullets">
-    <li>Designed and implemented a distributed microservices architecture with an API Gateway, independent services using MySQL and MongoDB, and a React frontend consuming the unified API.</li>
+    <li>Designed and implemented a distributed microservices architecture with an API Gateway,
+    independent services using MySQL and MongoDB, and a React frontend consuming the unified API.</li>
   </ul>
 </div>
 
@@ -285,13 +243,14 @@
   </div>
   <div class="entry-role">Python · Django · React</div>
   <ul class="bullets">
-    <li>LinkedIn-inspired professional networking platform built as a team project, designed with improved UX and features to better connect users with employment opportunities.</li>
+    <li>LinkedIn-inspired professional networking platform built as a team project, designed with
+    improved UX and features to better connect users with employment opportunities.</li>
   </ul>
 </div>
 
 <hr class="thick" style="margin-top:14px;"><hr class="thin">
 
-<!-- ══ LANGUAGES ══ -->
+<!-- LANGUAGES -->
 <div class="section-title">Languages</div>
 <hr class="thin">
 <div class="lang-row">
