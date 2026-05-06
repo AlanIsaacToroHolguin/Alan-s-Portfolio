@@ -65,6 +65,10 @@ const translations = {
             project3: {
                 title: "Proximidad App",
                 description: "LinkedIn-inspired professional networking platform built as a team project, designed with improved UX and features to better connect users with job opportunities."
+            },
+            project4: {
+                title: "AI Chat Assistant",
+                description: "Fullstack AI chatbot with real-time streaming responses, multi-conversation management, JWT authentication, and markdown rendering — powered by Groq API and OpenAI."
             }
         },
         // Contact Section
@@ -158,6 +162,10 @@ const translations = {
             project3: {
                 title: "App Proximidad",
                 description: "Plataforma de networking profesional inspirada en LinkedIn, desarrollada en equipo, con UX mejorada y funcionalidades para conectar mejor a los usuarios con oportunidades laborales."
+            },
+            project4: {
+                title: "AI Chat Assistant",
+                description: "Chatbot de IA fullstack con respuestas en streaming en tiempo real, gestión de conversaciones múltiples, autenticación JWT y renderizado de markdown — impulsado por Groq API y OpenAI."
             }
         },
         // Sección Contacto
@@ -280,6 +288,10 @@ function changeLanguage(lang) {
     if (projectCards[2]) {
         projectCards[2].querySelector('h3').textContent = t.projects.project3.title;
         projectCards[2].querySelector('p').textContent = t.projects.project3.description;
+    }
+    if (projectCards[3]) {
+        projectCards[3].querySelector('h3').textContent = t.projects.project4.title;
+        projectCards[3].querySelector('p').textContent = t.projects.project4.description;
     }
 
     // Actualizar Contact
