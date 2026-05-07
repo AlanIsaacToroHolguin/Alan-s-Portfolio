@@ -69,6 +69,10 @@ const translations = {
             project4: {
                 title: "AI Chat Assistant",
                 description: "Fullstack AI chatbot with real-time streaming responses, multi-conversation management, JWT authentication, and markdown rendering — powered by Groq API and OpenAI."
+            },
+            project5: {
+                title: "Electric Guitar E-Commerce",
+                description: "Enterprise e-commerce platform for electric guitars built with Spring Boot, featuring JWT authentication, product catalog, shopping cart, order state machines, and an admin dashboard with sales analytics."
             }
         },
         // Contact Section
@@ -166,6 +170,10 @@ const translations = {
             project4: {
                 title: "AI Chat Assistant",
                 description: "Chatbot de IA fullstack con respuestas en streaming en tiempo real, gestión de conversaciones múltiples, autenticación JWT y renderizado de markdown — impulsado por Groq API y OpenAI."
+            },
+            project5: {
+                title: "E-Commerce de Guitarras Eléctricas",
+                description: "Plataforma e-commerce empresarial para guitarras eléctricas con Spring Boot, autenticación JWT, catálogo de productos, carrito de compras, máquinas de estado para pedidos y dashboard administrativo con analítica de ventas."
             }
         },
         // Sección Contacto
@@ -292,6 +300,10 @@ function changeLanguage(lang) {
     if (projectCards[3]) {
         projectCards[3].querySelector('h3').textContent = t.projects.project4.title;
         projectCards[3].querySelector('p').textContent = t.projects.project4.description;
+    }
+    if (projectCards[4]) {
+        projectCards[4].querySelector('h3').textContent = t.projects.project5.title;
+        projectCards[4].querySelector('p').textContent = t.projects.project5.description;
     }
 
     // Actualizar Contact
