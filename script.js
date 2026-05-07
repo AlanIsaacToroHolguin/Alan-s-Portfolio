@@ -388,7 +388,7 @@ if (cvDownloadBtn) {
         e.preventDefault();
 
         // URL real de tu CV
-        const cvUrl = 'assets/cv/AlanToro-CV-Harvard.pdf';
+        const cvUrl = 'assets/cv/Software Developer_Alan Toro_Resume .pdf';
         
         // Crear link temporal para descarga
         const link = document.createElement('a');
