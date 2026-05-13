@@ -55,22 +55,26 @@ const translations = {
         projects: {
             title: "Projects",
             project1: {
+                title: "KhozAI",
+                description: "AI-powered web application deployed on Vercel, delivering intelligent features through a modern, responsive interface and a streamlined user experience."
+            },
+            project2: {
                 title: "Electric Guitar E-Commerce",
                 description: "Enterprise e-commerce platform for electric guitars built with Spring Boot, featuring JWT authentication, product catalog, shopping cart, order state machines, and an admin dashboard with sales analytics."
             },
-            project2: {
+            project3: {
                 title: "Band & Rehearsal Manager",
                 description: "Fullstack app for musicians to manage bands, schedule rehearsals, track attendance and organize their song repertoire with a kanban-style setlist board."
             },
-            project3: {
+            project4: {
                 title: "AI Chat Assistant",
                 description: "Fullstack AI chatbot with real-time streaming responses, multi-conversation management, JWT authentication, and markdown rendering — powered by Groq API and OpenAI."
             },
-            project4: {
+            project5: {
                 title: "Proximidad App",
                 description: "LinkedIn-inspired professional networking platform built as a team project, designed with improved UX and features to better connect users with job opportunities."
             },
-            project5: {
+            project6: {
                 title: "Microservices Architecture",
                 description: "Designed and implemented a distributed microservices architecture with an API Gateway, independent services using MySQL and MongoDB, and a React frontend consuming the unified API."
             }
@@ -156,22 +160,26 @@ const translations = {
         projects: {
             title: "Últimos Proyectos",
             project1: {
+                title: "KhozAI",
+                description: "Aplicación web impulsada por IA desplegada en Vercel, que ofrece funcionalidades inteligentes a través de una interfaz moderna y responsive con una experiencia de usuario optimizada."
+            },
+            project2: {
                 title: "E-Commerce de Guitarras Eléctricas",
                 description: "Plataforma e-commerce empresarial para guitarras eléctricas con Spring Boot, autenticación JWT, catálogo de productos, carrito de compras, máquinas de estado para pedidos y dashboard administrativo con analítica de ventas."
             },
-            project2: {
+            project3: {
                 title: "Band & Rehearsal Manager",
                 description: "App fullstack para músicos: gestión de bandas, ensayos, asistencia y repertorio con tablero kanban de setlist."
             },
-            project3: {
+            project4: {
                 title: "AI Chat Assistant",
                 description: "Chatbot de IA fullstack con respuestas en streaming en tiempo real, gestión de conversaciones múltiples, autenticación JWT y renderizado de markdown — impulsado por Groq API y OpenAI."
             },
-            project4: {
+            project5: {
                 title: "App Proximidad",
                 description: "Plataforma de networking profesional inspirada en LinkedIn, desarrollada en equipo, con UX mejorada y funcionalidades para conectar mejor a los usuarios con oportunidades laborales."
             },
-            project5: {
+            project6: {
                 title: "Arquitectura de Microservicios",
                 description: "Diseñé e implementé una arquitectura de microservicios distribuida con API Gateway, servicios independientes usando MySQL y MongoDB, y frontend en React consumiendo la API unificada."
             }
@@ -304,6 +312,10 @@ function changeLanguage(lang) {
     if (projectCards[4]) {
         projectCards[4].querySelector('h3').textContent = t.projects.project5.title;
         projectCards[4].querySelector('p').textContent = t.projects.project5.description;
+    }
+    if (projectCards[5]) {
+        projectCards[5].querySelector('h3').textContent = t.projects.project6.title;
+        projectCards[5].querySelector('p').textContent = t.projects.project6.description;
     }
 
     // Actualizar Contact
