@@ -15,7 +15,7 @@ const translations = {
         hero: {
             greeting: "Hello, I'm Alan Toro",
             role: "Full Stack Developer",
-            description: "Backend architecture & cloud integrations specialist building scalable solutions in the Microsoft ecosystem, with a focus on AI-driven implementations and Azure services.",
+            description: "Building scalable web applications and AI-powered products with React, .NET, Java and modern cloud tools. Focused on clean code, real-world impact, and shipping things that work.",
             viewProjects: "View Projects",
             contact: "Contact",
             downloadCV: "Download CV"
@@ -23,8 +23,8 @@ const translations = {
         // About Section
         about: {
             title: "About me",
-            text1: "I am a Full-Stack Developer with experience across the full stack — from React and TypeScript interfaces to .NET, Java, and Node.js APIs — and a growing focus on AI integrations using OpenAI models and modern LLM workflows.",
-            text2: "I'm currently building scalable applications at MAS Global Consulting (a Microsoft Partner organization), where I work with Azure services in real-world systems. I thrive in international environments and my goal is to keep delivering high-quality code while expanding my expertise in AI-driven products and cloud-native infrastructures.",
+            text1: "I am a Full-Stack Developer with experience across the stack: from React and TypeScript interfaces to .NET, Java and Node.js APIs, with a growing focus on AI integrations using OpenAI models and modern LLM workflows.",
+            text2: "I've built production applications in Microsoft Partner environments, integrating Azure services and AI workflows into real-world systems. I thrive in international environments and my goal is to keep delivering high-quality code while expanding my expertise in AI-driven products and cloud-native infrastructures.",
             stat1Title: "Completed Projects",
             stat2Title: "Months of experience",
             stat3Title: "Technologies Mastered"
@@ -132,7 +132,7 @@ const translations = {
         hero: {
             greeting: "Hola, soy Alan Toro",
             role: "Desarrollador Full Stack",
-            description: "Especialista en arquitectura backend e integraciones en la nube, construyendo soluciones escalables en el ecosistema Microsoft con enfoque en implementaciones impulsadas por IA.",
+            description: "Construyendo aplicaciones web escalables y productos impulsados por IA con React, .NET, Java y herramientas cloud modernas. Enfocado en código limpio, impacto real y entregar cosas que funcionan.",
             viewProjects: "Ver Proyectos",
             contact: "Contacto",
             downloadCV: "Descargar CV"
@@ -140,8 +140,8 @@ const translations = {
         // Sección Sobre Mí
         about: {
             title: "Sobre mí",
-            text1: "Soy un Desarrollador Full-Stack con experiencia en todo el stack — desde interfaces en React y TypeScript hasta APIs en .NET, Java y Node.js — y un enfoque creciente en integraciones de IA usando modelos de OpenAI y flujos modernos con LLMs.",
-            text2: "Actualmente construyo aplicaciones escalables en MAS Global Consulting (una organización Microsoft Partner), donde trabajo con servicios de Azure en sistemas reales. Disfruto los entornos internacionales y mi objetivo es seguir entregando código de alta calidad mientras expando mi experiencia en productos con IA e infraestructuras cloud-native.",
+            text1: "Soy un Desarrollador Full-Stack con experiencia en todo el stack: desde interfaces en React y TypeScript hasta APIs en .NET, Java y Node.js, con un enfoque creciente en integraciones de IA usando modelos de OpenAI y flujos modernos con LLMs.",
+            text2: "He construido aplicaciones en producción en entornos Microsoft Partner, integrando servicios de Azure y flujos con IA en sistemas reales. Disfruto los entornos internacionales y mi objetivo es seguir entregando código de alta calidad mientras expando mi experiencia en productos con IA e infraestructuras cloud-native.",
             stat1Title: "Proyectos Completados",
             stat2Title: "Meses de experiencia",
             stat3Title: "Tecnologías Dominadas"
