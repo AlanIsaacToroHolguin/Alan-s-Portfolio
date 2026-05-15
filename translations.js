@@ -8,6 +8,7 @@ const translations = {
             experience: "Experience",
             skills: "Skills",
             projects: "Projects",
+            articles: "Writing",
             contact: "Contact"
         },
         // Hero Section
@@ -81,6 +82,14 @@ const translations = {
                 }
             ]
         },
+        // Articles Section
+        articles: {
+            title: "Writing & Thoughts",
+            platform: "DEV.TO",
+            read: "6 min read",
+            articleTitle: "Stop Building Todo Apps: What I Learned Shipping a Real Side Project as a Junior Dev",
+            articleExcerpt: "5 honest lessons from building KhozAI — my first AI-powered side project — and why your day job and side projects compound each other."
+        },
         // Contact Section
         contact: {
             title: "Contact Me",
@@ -91,7 +100,8 @@ const translations = {
             subjectPlaceholder: "Subject",
             messagePlaceholder: "Write your Message",
             sendButton: "Send message",
-            location: "Medellín-Colombia"
+            location: "Medellín, Colombia",
+            remote: "Available for remote work"
         },
         // Footer
         footer: {
@@ -115,6 +125,7 @@ const translations = {
             experience: "Experiencia",
             skills: "Habilidades",
             projects: "Proyectos",
+            articles: "Artículos",
             contact: "Contacto"
         },
         // Sección Hero
@@ -188,6 +199,14 @@ const translations = {
                 }
             ]
         },
+        // Sección Artículos
+        articles: {
+            title: "Artículos y Reflexiones",
+            platform: "DEV.TO",
+            read: "6 min de lectura",
+            articleTitle: "Stop Building Todo Apps: Lo que aprendí construyendo un side project real como Junior Dev",
+            articleExcerpt: "5 lecciones honestas construyendo KhozAI — mi primer side project con IA — y por qué tu trabajo del día y tus side projects se potencian mutuamente."
+        },
         // Sección Contacto
         contact: {
             title: "Contáctame",
@@ -198,7 +217,8 @@ const translations = {
             subjectPlaceholder: "Asunto",
             messagePlaceholder: "Escribe tu Mensaje",
             sendButton: "Enviar mensaje",
-            location: "Medellín-Colombia"
+            location: "Medellín, Colombia",
+            remote: "Disponible para trabajo remoto"
         },
         // Footer
         footer: {
@@ -227,7 +247,7 @@ function changeLanguage(lang) {
     
     // Actualizar navegación
     const navLinks = document.querySelectorAll('.nav-link');
-    const keys = ['home', 'about', 'experience', 'skills', 'projects', 'contact'];
+    const keys = ['home', 'about', 'experience', 'skills', 'projects', 'articles', 'contact'];
     navLinks.forEach((link, index) => {
         if (keys[index]) {
             link.textContent = t.nav[keys[index]];
@@ -304,8 +324,19 @@ function changeLanguage(lang) {
         card.querySelector('p').textContent = item.description;
     });
 
+    // Actualizar Articles
+    if (sectionTitles[4]) sectionTitles[4].textContent = t.articles.title;
+    const articlePlatform = document.querySelector('.article-platform');
+    const articleRead = document.querySelector('.article-read');
+    const articleTitleEl = document.querySelector('.article-title');
+    const articleExcerptEl = document.querySelector('.article-excerpt');
+    if (articlePlatform) articlePlatform.textContent = t.articles.platform;
+    if (articleRead) articleRead.textContent = t.articles.read;
+    if (articleTitleEl) articleTitleEl.textContent = t.articles.articleTitle;
+    if (articleExcerptEl) articleExcerptEl.textContent = t.articles.articleExcerpt;
+
     // Actualizar Contact
-    if (sectionTitles[4]) sectionTitles[4].textContent = t.contact.title;
+    if (sectionTitles[5]) sectionTitles[5].textContent = t.contact.title;
     
     const contactInfoH3 = document.querySelector('.contact-info h3');
     const contactInfoP = document.querySelector('.contact-info p');
@@ -325,9 +356,10 @@ function changeLanguage(lang) {
     if (messageTextarea) messageTextarea.placeholder = t.contact.messagePlaceholder;
     if (submitBtn) submitBtn.textContent = t.contact.sendButton;
     
-    // Actualizar ubicación
+    // Actualizar contact methods (LinkedIn, location, remote)
     const contactMethods = document.querySelectorAll('.contact-method span');
-    if (contactMethods[2]) contactMethods[2].textContent = t.contact.location;
+    if (contactMethods[1]) contactMethods[1].textContent = t.contact.location;
+    if (contactMethods[2]) contactMethods[2].textContent = t.contact.remote;
     
     // Actualizar Footer
     const footerP = document.querySelector('.footer p');
