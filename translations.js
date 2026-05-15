@@ -23,8 +23,8 @@ const translations = {
         // About Section
         about: {
             title: "About me",
-            text1: "I am a Full-Stack Developer experienced in Java, .NET, and Node.js. I specialize in backend architecture and cloud integrations, with a growing focus on AI-driven solutions using Azure Cognitive Search and LLM implementations.",
-            text2: "During my experience at MAS Global Consulting (a Microsoft Partner organization), I have worked on building scalable applications and integrating Azure services to optimize real-world systems. My goal is to deliver high-quality code while expanding my expertise in cloud-native infrastructures and AI integrations.",
+            text1: "I am a Full-Stack Developer with experience across the full stack — from React and TypeScript interfaces to .NET, Java, and Node.js APIs — and a growing focus on AI integrations using OpenAI models and modern LLM workflows.",
+            text2: "I'm currently building scalable applications at MAS Global Consulting (a Microsoft Partner organization), where I work with Azure services in real-world systems. I thrive in international environments and my goal is to keep delivering high-quality code while expanding my expertise in AI-driven products and cloud-native infrastructures.",
             stat1Title: "Completed Projects",
             stat2Title: "Months of experience",
             stat3Title: "Technologies Mastered"
@@ -140,8 +140,8 @@ const translations = {
         // Sección Sobre Mí
         about: {
             title: "Sobre mí",
-            text1: "Soy un Desarrollador Full-Stack con experiencia en Java, .NET y Node.js. Me especializo en arquitectura backend e integraciones en la nube, con un enfoque creciente en soluciones impulsadas por IA usando Azure Cognitive Search e implementaciones LLM.",
-            text2: "Durante mi experiencia en MAS Global Consulting (una organización Microsoft Partner), he trabajado en la construcción de aplicaciones escalables e integración de servicios de Azure para optimizar sistemas del mundo real. Mi objetivo es entregar código de alta calidad mientras expando mi experiencia en infraestructuras cloud-native e integraciones de IA.",
+            text1: "Soy un Desarrollador Full-Stack con experiencia en todo el stack — desde interfaces en React y TypeScript hasta APIs en .NET, Java y Node.js — y un enfoque creciente en integraciones de IA usando modelos de OpenAI y flujos modernos con LLMs.",
+            text2: "Actualmente construyo aplicaciones escalables en MAS Global Consulting (una organización Microsoft Partner), donde trabajo con servicios de Azure en sistemas reales. Disfruto los entornos internacionales y mi objetivo es seguir entregando código de alta calidad mientras expando mi experiencia en productos con IA e infraestructuras cloud-native.",
             stat1Title: "Proyectos Completados",
             stat2Title: "Meses de experiencia",
             stat3Title: "Tecnologías Dominadas"
