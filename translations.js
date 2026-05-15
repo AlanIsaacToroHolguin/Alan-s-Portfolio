@@ -23,7 +23,7 @@ const translations = {
         about: {
             title: "About me",
             text1: "I am a Full-Stack Developer experienced in Java, .NET, and Node.js. I specialize in backend architecture and cloud integrations, with a growing focus on AI-driven solutions using Azure Cognitive Search and LLM implementations.",
-            text2: "During my experience at MAS Global Consulting — a Microsoft Partner organization — I have worked on building scalable applications and integrating Azure services to optimize real-world systems. My goal is to deliver high-quality code while expanding my expertise in cloud-native infrastructures and AI integrations.",
+            text2: "During my experience at MAS Global Consulting (a Microsoft Partner organization), I have worked on building scalable applications and integrating Azure services to optimize real-world systems. My goal is to deliver high-quality code while expanding my expertise in cloud-native infrastructures and AI integrations.",
             stat1Title: "Completed Projects",
             stat2Title: "Months of experience",
             stat3Title: "Technologies Mastered"
@@ -130,7 +130,7 @@ const translations = {
         about: {
             title: "Sobre mí",
             text1: "Soy un Desarrollador Full-Stack con experiencia en Java, .NET y Node.js. Me especializo en arquitectura backend e integraciones en la nube, con un enfoque creciente en soluciones impulsadas por IA usando Azure Cognitive Search e implementaciones LLM.",
-            text2: "Durante mi experiencia en MAS Global Consulting — una organización Microsoft Partner — he trabajado en la construcción de aplicaciones escalables e integración de servicios de Azure para optimizar sistemas del mundo real. Mi objetivo es entregar código de alta calidad mientras expando mi experiencia en infraestructuras cloud-native e integraciones de IA.",
+            text2: "Durante mi experiencia en MAS Global Consulting (una organización Microsoft Partner), he trabajado en la construcción de aplicaciones escalables e integración de servicios de Azure para optimizar sistemas del mundo real. Mi objetivo es entregar código de alta calidad mientras expando mi experiencia en infraestructuras cloud-native e integraciones de IA.",
             stat1Title: "Proyectos Completados",
             stat2Title: "Meses de experiencia",
             stat3Title: "Tecnologías Dominadas"
