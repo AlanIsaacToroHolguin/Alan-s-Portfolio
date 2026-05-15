@@ -57,7 +57,7 @@ const translations = {
             items: [
                 {
                     title: "KhozAI",
-                    description: "AI-powered web application deployed on Vercel, delivering intelligent features through a modern, responsive interface and a streamlined user experience."
+                    description: "AI-powered web platform for musicians, helping them generate song ideas, lyrics and creative suggestions through an intelligent assistant with a modern, responsive interface."
                 },
                 {
                     title: "Electric Guitar E-Commerce",
@@ -164,7 +164,7 @@ const translations = {
             items: [
                 {
                     title: "KhozAI",
-                    description: "Aplicación web impulsada por IA desplegada en Vercel, que ofrece funcionalidades inteligentes a través de una interfaz moderna y responsive con una experiencia de usuario optimizada."
+                    description: "Plataforma web con IA enfocada en músicos, que les ayuda a generar ideas musicales, letras y sugerencias creativas a través de un asistente inteligente con interfaz moderna y responsive."
                 },
                 {
                     title: "E-Commerce de Guitarras Eléctricas",
