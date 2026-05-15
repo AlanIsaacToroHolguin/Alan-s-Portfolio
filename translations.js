@@ -57,7 +57,7 @@ const translations = {
             items: [
                 {
                     title: "KhozAI",
-                    description: "AI-powered web platform for musicians, helping them generate song ideas, lyrics and creative suggestions through an intelligent assistant with a modern, responsive interface."
+                    description: "AI-powered web platform for guitarists that generates personalized practice routines based on level, available time, goals and weak areas — turning random practice into intentional progress."
                 },
                 {
                     title: "Electric Guitar E-Commerce",
@@ -164,7 +164,7 @@ const translations = {
             items: [
                 {
                     title: "KhozAI",
-                    description: "Plataforma web con IA enfocada en músicos, que les ayuda a generar ideas musicales, letras y sugerencias creativas a través de un asistente inteligente con interfaz moderna y responsive."
+                    description: "Plataforma web con IA para guitarristas que genera rutinas de estudio personalizadas según nivel, tiempo disponible, objetivos y áreas a mejorar — convirtiendo la práctica aleatoria en progreso intencional."
                 },
                 {
                     title: "E-Commerce de Guitarras Eléctricas",
