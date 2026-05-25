@@ -13,12 +13,14 @@ const translations = {
         },
         // Hero Section
         hero: {
-            greeting: "Hello, I'm Alan Toro",
+            greeting: "Hello, I'm <em>Alan Toro</em>",
             role: "Full Stack Developer",
             description: "Building scalable web applications and AI-powered products with React, .NET, Java and modern cloud tools. Focused on clean code, real-world impact, and shipping things that work.",
             viewProjects: "View Projects",
             contact: "Contact",
-            downloadCV: "Download CV"
+            downloadCV: "Download CV",
+            metaLeft: "Full Stack Developer, Medellín",
+            metaRight: "Open to opportunities"
         },
         // About Section
         about: {
@@ -27,7 +29,8 @@ const translations = {
             text2: "I've built production applications in Microsoft Partner environments, integrating Azure services and AI workflows into real-world systems. I thrive in international environments and my goal is to keep delivering high-quality code while expanding my expertise in AI-driven products and cloud-native infrastructures.",
             stat1Title: "Completed Projects",
             stat2Title: "Months of experience",
-            stat3Title: "Technologies Mastered"
+            stat3Title: "Technologies Mastered",
+            eyebrow: "The short version"
         },
         // Experience Section
         experience: {
@@ -50,7 +53,8 @@ const translations = {
             frontend: "Frontend",
             backend: "Backend",
             cloud: "Cloud & DevOps",
-            databases: "Databases"
+            databases: "Databases",
+            aiApis: "AI & APIs"
         },
         // Projects Section
         projects: {
@@ -58,7 +62,7 @@ const translations = {
             items: [
                 {
                     title: "KhozAI",
-                    description: "AI-powered web platform for guitarists that generates personalized practice routines based on level, available time, goals and weak areas — turning random practice into intentional progress."
+                    description: "Side project exploring AI-driven practice tooling for guitarists. Rule-based MVP that generates personalized routines from level, time available and weak areas. LLM integration on the roadmap. Built to learn how to ship a real product end-to-end."
                 },
                 {
                     title: "Electric Guitar E-Commerce",
@@ -70,7 +74,7 @@ const translations = {
                 },
                 {
                     title: "AI Chat Assistant",
-                    description: "Fullstack AI chatbot with real-time streaming responses, multi-conversation management, JWT authentication, and markdown rendering — powered by Groq API and OpenAI."
+                    description: "Fullstack AI chatbot with real-time streaming responses, multi-conversation management, JWT authentication, and markdown rendering. Powered by Groq API and OpenAI."
                 },
                 {
                     title: "Proximidad App",
@@ -88,11 +92,12 @@ const translations = {
             platform: "DEV.TO",
             read: "6 min read",
             articleTitle: "Stop Building Todo Apps: What I Learned Shipping a Real Side Project as a Junior Dev",
-            articleExcerpt: "5 honest lessons from building KhozAI — my first AI-powered side project — and why your day job and side projects compound each other."
+            articleExcerpt: "5 honest lessons from building KhozAI, my first real side project shipped end-to-end, and why your day job and side projects compound each other."
         },
         // Contact Section
         contact: {
             title: "Contact Me",
+            eyebrow: "Currently open to opportunities",
             subtitle: "Let's Work Together!",
             description: "I am available for freelance projects and new opportunities. Feel free to get in touch. ✅",
             namePlaceholder: "Name",
@@ -130,12 +135,14 @@ const translations = {
         },
         // Sección Hero
         hero: {
-            greeting: "Hola, soy Alan Toro",
+            greeting: "Hola, soy <em>Alan Toro</em>",
             role: "Desarrollador Full Stack",
             description: "Construyendo aplicaciones web escalables y productos impulsados por IA con React, .NET, Java y herramientas cloud modernas. Enfocado en código limpio, impacto real y entregar cosas que funcionan.",
             viewProjects: "Ver Proyectos",
             contact: "Contacto",
-            downloadCV: "Descargar CV"
+            downloadCV: "Descargar CV",
+            metaLeft: "Desarrollador Full Stack, Medellín",
+            metaRight: "Abierto a oportunidades"
         },
         // Sección Sobre Mí
         about: {
@@ -144,7 +151,8 @@ const translations = {
             text2: "He construido aplicaciones en producción en entornos Microsoft Partner, integrando servicios de Azure y flujos con IA en sistemas reales. Disfruto los entornos internacionales y mi objetivo es seguir entregando código de alta calidad mientras expando mi experiencia en productos con IA e infraestructuras cloud-native.",
             stat1Title: "Proyectos Completados",
             stat2Title: "Meses de experiencia",
-            stat3Title: "Tecnologías Dominadas"
+            stat3Title: "Tecnologías Dominadas",
+            eyebrow: "La versión corta"
         },
         // Sección Experiencia
         experience: {
@@ -167,7 +175,8 @@ const translations = {
             frontend: "Frontend",
             backend: "Backend",
             cloud: "Cloud & DevOps",
-            databases: "Bases de Datos"
+            databases: "Bases de Datos",
+            aiApis: "IA y APIs"
         },
         // Sección Proyectos
         projects: {
@@ -175,7 +184,7 @@ const translations = {
             items: [
                 {
                     title: "KhozAI",
-                    description: "Plataforma web con IA para guitarristas que genera rutinas de estudio personalizadas según nivel, tiempo disponible, objetivos y áreas a mejorar — convirtiendo la práctica aleatoria en progreso intencional."
+                    description: "Side project explorando herramientas de práctica para guitarristas con enfoque IA. MVP basado en reglas que genera rutinas personalizadas según nivel, tiempo disponible y áreas a mejorar. Integración con LLM en el roadmap. Construido para aprender a llevar un producto real de punta a punta."
                 },
                 {
                     title: "E-Commerce de Guitarras Eléctricas",
@@ -187,7 +196,7 @@ const translations = {
                 },
                 {
                     title: "AI Chat Assistant",
-                    description: "Chatbot de IA fullstack con respuestas en streaming en tiempo real, gestión de conversaciones múltiples, autenticación JWT y renderizado de markdown — impulsado por Groq API y OpenAI."
+                    description: "Chatbot de IA fullstack con respuestas en streaming en tiempo real, gestión de conversaciones múltiples, autenticación JWT y renderizado de markdown. Impulsado por Groq API y OpenAI."
                 },
                 {
                     title: "App Proximidad",
@@ -205,11 +214,12 @@ const translations = {
             platform: "DEV.TO",
             read: "6 min de lectura",
             articleTitle: "Stop Building Todo Apps: Lo que aprendí construyendo un side project real como Junior Dev",
-            articleExcerpt: "5 lecciones honestas construyendo KhozAI — mi primer side project con IA — y por qué tu trabajo del día y tus side projects se potencian mutuamente."
+            articleExcerpt: "5 lecciones honestas construyendo KhozAI, mi primer side project real lanzado de punta a punta, y por qué tu trabajo del día y tus side projects se potencian mutuamente."
         },
         // Sección Contacto
         contact: {
             title: "Contáctame",
+            eyebrow: "Disponible para nuevas oportunidades",
             subtitle: "¡Trabajemos Juntos!",
             description: "Estoy disponible para proyectos freelance y nuevas oportunidades. No dudes en contactarme. ✅",
             namePlaceholder: "Nombre",
@@ -259,7 +269,13 @@ function changeLanguage(lang) {
     const heroSubtitle = document.querySelector('.hero-subtitle');
     const heroDescription = document.querySelector('.hero-description');
     
-    if (heroTitle) heroTitle.textContent = t.hero.greeting;
+    if (heroTitle) heroTitle.innerHTML = t.hero.greeting;
+
+    // Hero meta strip (top of hero)
+    const heroMetaLeft  = document.querySelector('.hero-meta-left .hero-meta-label');
+    const heroMetaRight = document.querySelector('.hero-meta-right .hero-meta-label');
+    if (heroMetaLeft  && t.hero.metaLeft)  heroMetaLeft.textContent  = t.hero.metaLeft;
+    if (heroMetaRight && t.hero.metaRight) heroMetaRight.textContent = t.hero.metaRight;
     if (heroSubtitle) heroSubtitle.textContent = t.hero.role;
     if (heroDescription) heroDescription.textContent = t.hero.description;
     
@@ -280,6 +296,9 @@ function changeLanguage(lang) {
     const aboutTexts = document.querySelectorAll('.about-text p');
     if (aboutTexts[0]) aboutTexts[0].textContent = t.about.text1;
     if (aboutTexts[1]) aboutTexts[1].textContent = t.about.text2;
+
+    const aboutEyebrow = document.querySelector('.about-eyebrow');
+    if (aboutEyebrow && t.about.eyebrow) aboutEyebrow.textContent = t.about.eyebrow;
 
     const statTitles = document.querySelectorAll('.stat-item p');
     if (statTitles[0]) statTitles[0].textContent = t.about.stat1Title;
@@ -312,6 +331,7 @@ function changeLanguage(lang) {
     if (skillCategories[1]) skillCategories[1].textContent = t.skills.backend;
     if (skillCategories[2]) skillCategories[2].textContent = t.skills.cloud;
     if (skillCategories[3]) skillCategories[3].textContent = t.skills.databases;
+    if (skillCategories[4]) skillCategories[4].textContent = t.skills.aiApis;
 
     // Actualizar Projects
     if (sectionTitles[3]) sectionTitles[3].textContent = t.projects.title;
@@ -340,8 +360,10 @@ function changeLanguage(lang) {
     
     const contactInfoH3 = document.querySelector('.contact-info h3');
     const contactInfoP = document.querySelector('.contact-info p');
+    const contactEyebrow = document.querySelector('.contact-eyebrow');
     if (contactInfoH3) contactInfoH3.textContent = t.contact.subtitle;
     if (contactInfoP) contactInfoP.textContent = t.contact.description;
+    if (contactEyebrow) contactEyebrow.textContent = t.contact.eyebrow;
     
     // Actualizar placeholders del formulario
     const nameInput = document.querySelector('input[name="name"]');

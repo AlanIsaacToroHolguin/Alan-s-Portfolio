@@ -27,42 +27,77 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Efecto de scroll en navbar
+// Efecto de scroll en navbar — transparente sobre hero oscuro, sólido al scroll
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.borderBottom = '1px solid rgba(0, 0, 0, 0.1)';
+    if (window.scrollY > 80) {
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.borderBottom = '1px solid rgba(0, 0, 0, 0.05)';
+        navbar.classList.remove('scrolled');
     }
 });
 
-// Animación de aparición de elementos al hacer scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+// ────────────────────────────────────────────────
+// Smooth scroll (Lenis) + scroll reveals
+// ────────────────────────────────────────────────
+window.addEventListener('DOMContentLoaded', () => {
+    // Init Lenis only on devices that respect motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+    if (!prefersReducedMotion && typeof Lenis !== 'undefined') {
+        const lenis = new Lenis({
+            duration: 1.15,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smoothWheel: true,
+            wheelMultiplier: 1,
+            touchMultiplier: 1.4,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
         }
-    });
-}, observerOptions);
+        requestAnimationFrame(raf);
 
-// Observar elementos para animación
-document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.skill-category, .project-card, .stat-item, .about-text, .experience-card');
-    
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
+        // Make in-page anchor links use Lenis
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', (e) => {
+                const targetId = a.getAttribute('href');
+                if (!targetId || targetId === '#') return;
+                const el = document.querySelector(targetId);
+                if (el) {
+                    e.preventDefault();
+                    lenis.scrollTo(el, { offset: -70, duration: 1.4 });
+                }
+            });
+        });
+    }
+
+    // Auto-apply .reveal to commonly-animated elements (keeps backwards compat)
+    const autoReveal = document.querySelectorAll(
+        '.section-title, .skill-category, .project-card, .stat-item, .about-text, .experience-card, .article-card, .contact-info, .contact-form'
+    );
+    autoReveal.forEach(el => el.classList.add('reveal'));
+
+    // Stagger children inside groups
+    document.querySelectorAll('.skills-grid, .projects-grid, .about-stats, .articles-grid').forEach(group => {
+        group.querySelectorAll('.reveal').forEach((child, i) => {
+            child.style.setProperty('--reveal-delay', `${i * 0.08}s`);
+        });
+    });
+
+    // Reveal observer
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+        revealObserver.observe(el);
     });
 });
 
@@ -140,10 +175,15 @@ if (contactForm) {
             return;
         }
 
-        const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
+        const submitBtn   = this.querySelector('button[type="submit"]');
+        const submitLabel = submitBtn.querySelector('.form-submit-label');
+        const statusEl    = this.querySelector('.form-status');
+        const originalLabel = submitLabel ? submitLabel.textContent : 'Send message';
+
+        submitBtn.classList.add('is-loading');
         submitBtn.disabled = true;
-        submitBtn.textContent = currentLang === 'en' ? 'Sending...' : 'Enviando...';
+        if (submitLabel) submitLabel.textContent = currentLang === 'en' ? 'Sending…' : 'Enviando…';
+        if (statusEl) { statusEl.textContent = t.sending; statusEl.className = 'form-status'; }
         showNotification(t.sending, 'info');
 
         try {
@@ -154,13 +194,24 @@ if (contactForm) {
                 message: message
             });
             showNotification(t.success, 'success');
+            if (statusEl) { statusEl.textContent = t.success; statusEl.className = 'form-status is-success'; }
+            submitBtn.classList.remove('is-loading');
+            submitBtn.classList.add('is-success');
+            if (submitLabel) submitLabel.textContent = currentLang === 'en' ? 'Sent ✓' : 'Enviado ✓';
             this.reset();
+            setTimeout(() => {
+                submitBtn.classList.remove('is-success');
+                submitBtn.disabled = false;
+                if (submitLabel) submitLabel.textContent = originalLabel;
+                if (statusEl) { statusEl.textContent = ''; statusEl.className = 'form-status'; }
+            }, 3200);
         } catch (err) {
             console.error('EmailJS error:', err);
             showNotification(t.error, 'error');
-        } finally {
+            if (statusEl) { statusEl.textContent = t.error; statusEl.className = 'form-status is-error'; }
+            submitBtn.classList.remove('is-loading');
             submitBtn.disabled = false;
-            submitBtn.textContent = originalText;
+            if (submitLabel) submitLabel.textContent = originalLabel;
         }
     });
 }
@@ -285,14 +336,76 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
-// Activar efecto de typing cuando la página carga
+// (Typewriter desactivado — chocaba con tipografía editorial y rompía los tags HTML del hero.
+// El reveal animado del hero se hace ahora vía CSS / IntersectionObserver en Fase 3.)
+
+// Año dinámico en el footer
 document.addEventListener('DOMContentLoaded', () => {
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const originalText = heroTitle.innerHTML;
-        setTimeout(() => {
-            typeWriter(heroTitle, originalText, 50);
-        }, 1000);
+    const yearEl = document.getElementById('footer-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+});
+
+// ────────────────────────────────────────────────
+// Custom cursor + magnetic buttons (desktop only)
+// ────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+    const isFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!isFinePointer) return;
+
+    const dot  = document.querySelector('.cursor-dot');
+    const ring = document.querySelector('.cursor-ring');
+    if (!dot || !ring) return;
+
+    let mouseX = 0, mouseY = 0;
+    let dotX = 0, dotY = 0;
+    let ringX = 0, ringY = 0;
+    const dotLerp  = 0.45;
+    const ringLerp = 0.18;
+
+    window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        document.body.classList.add('cursor-active');
+    });
+
+    window.addEventListener('mouseleave', () => document.body.classList.remove('cursor-active'));
+    window.addEventListener('mouseenter', () => document.body.classList.add('cursor-active'));
+
+    function tick() {
+        dotX  += (mouseX - dotX)  * dotLerp;
+        dotY  += (mouseY - dotY)  * dotLerp;
+        ringX += (mouseX - ringX) * ringLerp;
+        ringY += (mouseY - ringY) * ringLerp;
+        dot.style.transform  = `translate(${dotX}px, ${dotY}px) translate(-50%, -50%)`;
+        ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
+        requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+
+    // Hover detection on interactive elements
+    const hoverSelector = 'a, button, .btn, .project-card, .skill-category, .article-card, .contact-method, .lang-btn, .hamburger, input, textarea';
+    document.querySelectorAll(hoverSelector).forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+    });
+
+    // Magnetic effect on primary buttons (subtle)
+    if (!prefersReducedMotion) {
+        const magneticEls = document.querySelectorAll('.btn-primary, .btn-cv, .form-submit, .social-link');
+        magneticEls.forEach(el => {
+            el.classList.add('magnetic');
+            const strength = 0.25;
+            el.addEventListener('mousemove', (e) => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                el.style.transform = `translate(${x * strength}px, ${y * strength}px)`;
+            });
+            el.addEventListener('mouseleave', () => {
+                el.style.transform = 'translate(0, 0)';
+            });
+        });
     }
 });
 
