@@ -501,12 +501,12 @@ if (cvDownloadBtn) {
         e.preventDefault();
 
         // URL real de tu CV
-        const cvUrl = 'assets/cv/Software Developer_Alan Toro_Resume .pdf';
-        
+        const cvUrl = 'assets/cv/Alan Toro_FullStack_Developer_Resume.pdf';
+
         // Crear link temporal para descarga
         const link = document.createElement('a');
         link.href = cvUrl;
-        link.download = 'AlanToroCV.pdf';
+        link.download = 'Alan Toro_FullStack_Developer_Resume.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);

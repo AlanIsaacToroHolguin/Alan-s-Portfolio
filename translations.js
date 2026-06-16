@@ -15,7 +15,7 @@ const translations = {
         hero: {
             greeting: "Hello, I'm <em>Alan Toro</em>",
             role: "Full Stack Developer",
-            description: "Building scalable web applications and AI-powered products with React, .NET, Java and modern cloud tools. Focused on clean code, real-world impact, and shipping things that work.",
+            description: "Building scalable web applications and AI-powered products with C#/.NET, React, Python and Microsoft Azure. Focused on clean code, real-world impact, and shipping things that work.",
             viewProjects: "View Projects",
             contact: "Contact",
             downloadCV: "Download CV",
@@ -25,7 +25,7 @@ const translations = {
         // About Section
         about: {
             title: "About me",
-            text1: "I am a Full-Stack Developer with experience across the stack: from React and TypeScript interfaces to .NET, Java and Node.js APIs, with a growing focus on AI integrations using OpenAI models and modern LLM workflows.",
+            text1: "I am a Full-Stack Developer with experience across the stack: from React and TypeScript interfaces to C#/.NET, Python and Node.js APIs, with a growing focus on AI integrations using Azure AI Foundry models, RAG and agentic frameworks.",
             text2: "I've built production applications in Microsoft Partner environments, integrating Azure services and AI workflows into real-world systems. I thrive in international environments and my goal is to keep delivering high-quality code while expanding my expertise in AI-driven products and cloud-native infrastructures.",
             stat1Title: "Completed Projects",
             stat2Title: "Months of experience",
@@ -35,17 +35,17 @@ const translations = {
         // Experience Section
         experience: {
             title: "Experience",
-            role: "Junior Software Developer & Intern",
+            role: "Full Stack Developer",
             company: "MAS Global Consulting · Microsoft Partner",
             status: "● Current",
             period: "Dec 2025 – Present · Expected: Jun 2026",
             location: "Medellín, Colombia · On-site",
-            desc: "Software Developer at Más Global Consulting, a Microsoft Partner organization, specializing in fullstack development, cloud infrastructure, and AI-driven solutions within the Microsoft ecosystem.",
-            li1: "Fullstack Development: Implemented dynamic frontend components using React and TypeScript, integrating them with backend services developed in .NET / C#.",
-            li2: "Generative AI Integration: Led the integration of OpenAI models for internal process automation, improving operational efficiency through applied artificial intelligence.",
-            li3: "Cloud Infrastructure: Managed configuration and deployment of applications in Microsoft Azure, ensuring correct backend service operation and cloud solution scalability.",
-            li4: "CI/CD Pipeline: Optimized software traceability and deployment through Azure DevOps workflows, reducing production errors and improving technical documentation.",
-            li5: "Requirements Analysis: Actively collaborated in gathering technical and functional requirements, translating business needs into software solutions aligned with best practices."
+            desc: "Full Stack Developer at Más Global Consulting, a Microsoft Partner organization, building and deploying web applications and AI-driven solutions with C#/.NET, React, Python and Microsoft Azure.",
+            li1: "AI Document Intelligence MVP: Built an MVP with Azure Document Intelligence and AI models to automatically parse and compare CVs against job descriptions, cutting recruiter screening time by 40%; developed the React + TypeScript front end integrated with C#/.NET services.",
+            li2: "Enterprise AI Chatbot: Led the development of an enterprise AI chatbot using Python, FastAPI and the Agno agentic framework connected to Azure AI Foundry models, cutting website navigation time by ~20% through natural-language interaction.",
+            li3: "Cloud Observability & Cost: Integrated Azure Application Insights for full-stack observability (real-time logs, latency, error tracking) and reduced Azure AI Search cost from $70 to $0 by leveraging the Microsoft Partner free tier.",
+            li4: "CI/CD Automation: Streamlined CI/CD workflows in Azure DevOps by automating pipeline triggers, reducing manual deployment steps and sharing the approach to improve team-wide delivery speed.",
+            li5: "Requirements & Scalability: Authored a technical scalability report with financial forecasts across three growth scenarios (50, 100, 200 users) and collaborated in requirements gathering, translating business needs into software solutions."
         },
         // Skills Section
         skills: {
@@ -137,7 +137,7 @@ const translations = {
         hero: {
             greeting: "Hola, soy <em>Alan Toro</em>",
             role: "Desarrollador Full Stack",
-            description: "Construyendo aplicaciones web escalables y productos impulsados por IA con React, .NET, Java y herramientas cloud modernas. Enfocado en código limpio, impacto real y entregar cosas que funcionan.",
+            description: "Construyendo aplicaciones web escalables y productos impulsados por IA con C#/.NET, React, Python y Microsoft Azure. Enfocado en código limpio, impacto real y entregar cosas que funcionan.",
             viewProjects: "Ver Proyectos",
             contact: "Contacto",
             downloadCV: "Descargar CV",
@@ -147,7 +147,7 @@ const translations = {
         // Sección Sobre Mí
         about: {
             title: "Sobre mí",
-            text1: "Soy un Desarrollador Full-Stack con experiencia en todo el stack: desde interfaces en React y TypeScript hasta APIs en .NET, Java y Node.js, con un enfoque creciente en integraciones de IA usando modelos de OpenAI y flujos modernos con LLMs.",
+            text1: "Soy un Desarrollador Full-Stack con experiencia en todo el stack: desde interfaces en React y TypeScript hasta APIs en C#/.NET, Python y Node.js, con un enfoque creciente en integraciones de IA usando modelos de Azure AI Foundry, RAG y frameworks agénticos.",
             text2: "He construido aplicaciones en producción en entornos Microsoft Partner, integrando servicios de Azure y flujos con IA en sistemas reales. Disfruto los entornos internacionales y mi objetivo es seguir entregando código de alta calidad mientras expando mi experiencia en productos con IA e infraestructuras cloud-native.",
             stat1Title: "Proyectos Completados",
             stat2Title: "Meses de experiencia",
@@ -157,17 +157,17 @@ const translations = {
         // Sección Experiencia
         experience: {
             title: "Experiencia",
-            role: "Junior Software Developer & Practicante",
+            role: "Desarrollador Full Stack",
             company: "MAS Global Consulting · Microsoft Partner",
             status: "● Actual",
             period: "Dic 2025 – Actualidad · Finaliza: Jun 2026",
             location: "Medellín, Colombia · Presencial",
-            desc: "Desarrollador de Software en Más Global Consulting, una organización Microsoft Partner, especializado en desarrollo fullstack, infraestructura cloud y soluciones impulsadas por IA dentro del ecosistema Microsoft.",
-            li1: "Desarrollo Fullstack: Implementé componentes dinámicos en el frontend usando React y TypeScript, integrándolos con servicios backend desarrollados en .NET / C#.",
-            li2: "Integración de IA Generativa: Lideré la integración de modelos de OpenAI para la automatización de procesos internos, mejorando la eficiencia operativa mediante IA aplicada.",
-            li3: "Infraestructura Cloud: Gestioné la configuración y despliegue de aplicaciones en Microsoft Azure, asegurando la correcta operación de servicios backend y la escalabilidad en la nube.",
-            li4: "CI/CD: Optimicé la trazabilidad y el despliegue de software mediante flujos de trabajo en Azure DevOps, reduciendo errores en producción y mejorando la documentación técnica.",
-            li5: "Análisis de Requerimientos: Colaboré activamente en el levantamiento de requerimientos técnicos y funcionales, traduciendo necesidades de negocio en soluciones de software alineadas a buenas prácticas."
+            desc: "Desarrollador Full Stack en Más Global Consulting, una organización Microsoft Partner, construyendo y desplegando aplicaciones web y soluciones impulsadas por IA con C#/.NET, React, Python y Microsoft Azure.",
+            li1: "MVP de IA con Document Intelligence: Construí un MVP con Azure Document Intelligence y modelos de IA para analizar y comparar automáticamente CVs contra descripciones de cargo, reduciendo el tiempo de filtrado de reclutadores en un 40%; desarrollé el frontend en React + TypeScript integrado con servicios en C#/.NET.",
+            li2: "Chatbot de IA Empresarial: Lideré el desarrollo de un chatbot de IA empresarial con Python, FastAPI y el framework agéntico Agno conectado a modelos de Azure AI Foundry, reduciendo el tiempo de navegación en el sitio web en ~20% mediante interacción en lenguaje natural.",
+            li3: "Observabilidad y Costos Cloud: Integré Azure Application Insights para observabilidad full-stack (logs en tiempo real, latencia, seguimiento de errores) y reduje el costo de Azure AI Search de $70 a $0 aprovechando el nivel gratuito de Microsoft Partner.",
+            li4: "Automatización CI/CD: Optimicé los flujos de CI/CD en Azure DevOps automatizando los disparadores de pipelines, reduciendo pasos manuales de despliegue y compartiendo el enfoque para mejorar la velocidad de entrega del equipo.",
+            li5: "Requerimientos y Escalabilidad: Elaboré un informe técnico de escalabilidad con proyecciones financieras en tres escenarios de crecimiento (50, 100, 200 usuarios) y colaboré en el levantamiento de requerimientos, traduciendo necesidades de negocio en soluciones de software."
         },
         // Sección Habilidades
         skills: {
