@@ -29,23 +29,48 @@ const translations = {
             text2: "I've built production applications in Microsoft Partner environments, integrating Azure services and AI workflows into real-world systems. I thrive in international environments and my goal is to keep delivering high-quality code while expanding my expertise in AI-driven products and cloud-native infrastructures.",
             stat1Title: "Completed Projects",
             stat2Title: "Months of experience",
-            stat3Title: "Technologies Mastered",
+            stat3Title: "Technologies Used",
             eyebrow: "The short version"
         },
         // Experience Section
         experience: {
             title: "Experience",
-            role: "Full Stack Developer",
-            company: "MAS Global Consulting · Microsoft Partner",
-            status: "● Current",
-            period: "Dec 2025 – Present · Expected: Jun 2026",
-            location: "Medellín, Colombia · On-site",
-            desc: "Full Stack Developer at Más Global Consulting, a Microsoft Partner organization, building and deploying web applications and AI-driven solutions with C#/.NET, React, Python and Microsoft Azure.",
-            li1: "AI Document Intelligence MVP: Built an MVP with Azure Document Intelligence and AI models to automatically parse and compare CVs against job descriptions, cutting recruiter screening time by 40%; developed the React + TypeScript front end integrated with C#/.NET services.",
-            li2: "Enterprise AI Chatbot: Led the development of an enterprise AI chatbot using Python, FastAPI and the Agno agentic framework connected to Azure AI Foundry models, cutting website navigation time by ~20% through natural-language interaction.",
-            li3: "Cloud Observability & Cost: Integrated Azure Application Insights for full-stack observability (real-time logs, latency, error tracking) and reduced Azure AI Search cost from $70 to $0 by leveraging the Microsoft Partner free tier.",
-            li4: "CI/CD Automation: Streamlined CI/CD workflows in Azure DevOps by automating pipeline triggers, reducing manual deployment steps and sharing the approach to improve team-wide delivery speed.",
-            li5: "Requirements & Scalability: Authored a technical scalability report with financial forecasts across three growth scenarios (50, 100, 200 users) and collaborated in requirements gathering, translating business needs into software solutions."
+            items: [
+                {
+                    role: "Software Development Assistant",
+                    company: "Presencia Colombo Suiza",
+                    period: "Jul 2026 – Sep 2026",
+                    location: "Medellín, Colombia · Hybrid",
+                    desc: "Software development, data analysis and process improvement.",
+                    bullets: [
+                        "Developed Python automation scripts to streamline repetitive tasks and improve data processing workflows.",
+                        "Extracted, cleaned and consolidated data from multiple Excel sources, standardizing reports and improving data quality.",
+                        "Used SQL and relational data structures to organize, validate and analyze information for operational reporting.",
+                        "Developed and maintained Power BI dashboards and reports to visualize KPIs and improve organizational visibility.",
+                        "Supported the development of web tools and prepared technical documentation to improve workflows and knowledge transfer."
+                    ]
+                },
+                {
+                    role: "Software Developer",
+                    company: "MAS Global Consulting · Microsoft Partner",
+                    period: "Dec 2025 – Jun 2026",
+                    location: "Medellín, Colombia · On-site",
+                    desc: "Software Developer at MAS Global Consulting, a Microsoft Partner organization, building and deploying web applications and AI-driven solutions with C#/.NET, React, Python and Microsoft Azure.",
+                    bullets: [
+                        "Developed full stack applications with React, TypeScript and .NET/C#, translating business requirements into practical, scalable solutions.",
+                        "Built a resume-analysis MVP with Azure Document Intelligence that compares CVs against job descriptions, reducing recruiter screening time by 40%.",
+                        "Led the development of an enterprise chatbot with Python, FastAPI and Agno, integrating OpenAI models through Azure AI Foundry and reducing website navigation time by ~20%.",
+                        "Supported cloud applications with Azure and Azure DevOps: monitoring with Application Insights, automating CI/CD triggers and reducing Azure AI Search cost from $70 to $0 per month.",
+                        "Collaborated with the team and stakeholders on requirements and problem solving, and authored a scalability report for 50, 100 and 200 users."
+                    ]
+                },
+                {
+                    role: "Associate Degree in Software Analysis and Development",
+                    company: "SENA",
+                    period: "2024 – 2026 · Graduated Jul 2026",
+                    location: "Colombia"
+                }
+            ]
         },
         // Skills Section
         skills: {
@@ -91,7 +116,7 @@ const translations = {
             title: "Writing & Thoughts",
             platform: "DEV.TO",
             read: "6 min read",
-            articleTitle: "Stop Building Todo Apps: What I Learned Shipping a Real Side Project as a Junior Dev",
+            articleTitle: "Stop Building Todo Apps: What I Learned Shipping a Real Side Project",
             articleExcerpt: "5 honest lessons from building KhozAI, my first real side project shipped end-to-end, and why your day job and side projects compound each other."
         },
         // Contact Section
@@ -99,12 +124,14 @@ const translations = {
             title: "Contact Me",
             eyebrow: "Currently open to opportunities",
             subtitle: "Let's Work Together!",
-            description: "I am available for freelance projects and new opportunities. Feel free to get in touch. ✅",
+            description: "I am available for freelance projects and new opportunities. Feel free to get in touch.",
             namePlaceholder: "Name",
             emailPlaceholder: "Email",
             subjectPlaceholder: "Subject",
             messagePlaceholder: "Write your Message",
             sendButton: "Send message",
+            locationLabel: "Based in",
+            availabilityLabel: "Availability",
             location: "Medellín, Colombia",
             remote: "Available for remote work"
         },
@@ -151,23 +178,48 @@ const translations = {
             text2: "He construido aplicaciones en producción en entornos Microsoft Partner, integrando servicios de Azure y flujos con IA en sistemas reales. Disfruto los entornos internacionales y mi objetivo es seguir entregando código de alta calidad mientras expando mi experiencia en productos con IA e infraestructuras cloud-native.",
             stat1Title: "Proyectos Completados",
             stat2Title: "Meses de experiencia",
-            stat3Title: "Tecnologías Dominadas",
+            stat3Title: "Tecnologías Utilizadas",
             eyebrow: "La versión corta"
         },
         // Sección Experiencia
         experience: {
             title: "Experiencia",
-            role: "Desarrollador Full Stack",
-            company: "MAS Global Consulting · Microsoft Partner",
-            status: "● Actual",
-            period: "Dic 2025 – Actualidad · Finaliza: Jun 2026",
-            location: "Medellín, Colombia · Presencial",
-            desc: "Desarrollador Full Stack en Más Global Consulting, una organización Microsoft Partner, construyendo y desplegando aplicaciones web y soluciones impulsadas por IA con C#/.NET, React, Python y Microsoft Azure.",
-            li1: "MVP de IA con Document Intelligence: Construí un MVP con Azure Document Intelligence y modelos de IA para analizar y comparar automáticamente CVs contra descripciones de cargo, reduciendo el tiempo de filtrado de reclutadores en un 40%; desarrollé el frontend en React + TypeScript integrado con servicios en C#/.NET.",
-            li2: "Chatbot de IA Empresarial: Lideré el desarrollo de un chatbot de IA empresarial con Python, FastAPI y el framework agéntico Agno conectado a modelos de Azure AI Foundry, reduciendo el tiempo de navegación en el sitio web en ~20% mediante interacción en lenguaje natural.",
-            li3: "Observabilidad y Costos Cloud: Integré Azure Application Insights para observabilidad full-stack (logs en tiempo real, latencia, seguimiento de errores) y reduje el costo de Azure AI Search de $70 a $0 aprovechando el nivel gratuito de Microsoft Partner.",
-            li4: "Automatización CI/CD: Optimicé los flujos de CI/CD en Azure DevOps automatizando los disparadores de pipelines, reduciendo pasos manuales de despliegue y compartiendo el enfoque para mejorar la velocidad de entrega del equipo.",
-            li5: "Requerimientos y Escalabilidad: Elaboré un informe técnico de escalabilidad con proyecciones financieras en tres escenarios de crecimiento (50, 100, 200 usuarios) y colaboré en el levantamiento de requerimientos, traduciendo necesidades de negocio en soluciones de software."
+            items: [
+                {
+                    role: "Asistente de Desarrollo de Software",
+                    company: "Presencia Colombo Suiza",
+                    period: "Jul 2026 – Sep 2026",
+                    location: "Medellín, Colombia · Híbrido",
+                    desc: "Desarrollo de software, análisis de datos y mejora de procesos.",
+                    bullets: [
+                        "Desarrollé scripts de automatización en Python para agilizar tareas repetitivas y mejorar los flujos de procesamiento de datos.",
+                        "Extraje, limpié y consolidé datos de múltiples fuentes de Excel, estandarizando los reportes y mejorando la calidad de los datos.",
+                        "Usé SQL y estructuras de datos relacionales para organizar, validar y analizar información para reportes operativos.",
+                        "Desarrollé y mantuve dashboards y reportes en Power BI para visualizar KPIs y mejorar la visibilidad organizacional.",
+                        "Apoyé el desarrollo de herramientas web y preparé documentación técnica para mejorar los flujos de trabajo y la transferencia de conocimiento."
+                    ]
+                },
+                {
+                    role: "Desarrollador de Software",
+                    company: "MAS Global Consulting · Microsoft Partner",
+                    period: "Dic 2025 – Jun 2026",
+                    location: "Medellín, Colombia · Presencial",
+                    desc: "Desarrollador de Software en MAS Global Consulting, una organización Microsoft Partner, construyendo y desplegando aplicaciones web y soluciones impulsadas por IA con C#/.NET, React, Python y Microsoft Azure.",
+                    bullets: [
+                        "Desarrollé aplicaciones full stack con React, TypeScript y .NET/C#, traduciendo requerimientos de negocio en soluciones prácticas y escalables.",
+                        "Construí un MVP de análisis de hojas de vida con Azure Document Intelligence que compara CVs contra descripciones de vacantes, reduciendo 40% el tiempo de filtrado de los reclutadores.",
+                        "Lideré el desarrollo de un chatbot empresarial con Python, FastAPI y Agno, integrando modelos de OpenAI mediante Azure AI Foundry y reduciendo ~20% el tiempo de navegación del sitio.",
+                        "Di soporte a aplicaciones en la nube con Azure y Azure DevOps: monitoreo con Application Insights, automatización de triggers de CI/CD y reducción del costo de Azure AI Search de $70 a $0 al mes.",
+                        "Colaboré con el equipo y las partes interesadas en requerimientos y resolución de problemas, y redacté un informe de escalabilidad para 50, 100 y 200 usuarios."
+                    ]
+                },
+                {
+                    role: "Tecnólogo en Análisis y Desarrollo de Software",
+                    company: "SENA",
+                    period: "2024 – 2026 · Graduado en jul 2026",
+                    location: "Colombia"
+                }
+            ]
         },
         // Sección Habilidades
         skills: {
@@ -213,7 +265,7 @@ const translations = {
             title: "Artículos y Reflexiones",
             platform: "DEV.TO",
             read: "6 min de lectura",
-            articleTitle: "Stop Building Todo Apps: Lo que aprendí construyendo un side project real como Junior Dev",
+            articleTitle: "Stop Building Todo Apps: Lo que aprendí construyendo un side project real",
             articleExcerpt: "5 lecciones honestas construyendo KhozAI, mi primer side project real lanzado de punta a punta, y por qué tu trabajo del día y tus side projects se potencian mutuamente."
         },
         // Sección Contacto
@@ -221,12 +273,14 @@ const translations = {
             title: "Contáctame",
             eyebrow: "Disponible para nuevas oportunidades",
             subtitle: "¡Trabajemos Juntos!",
-            description: "Estoy disponible para proyectos freelance y nuevas oportunidades. No dudes en contactarme. ✅",
+            description: "Estoy disponible para proyectos freelance y nuevas oportunidades. No dudes en contactarme.",
             namePlaceholder: "Nombre",
             emailPlaceholder: "Correo electrónico",
             subjectPlaceholder: "Asunto",
             messagePlaceholder: "Escribe tu Mensaje",
             sendButton: "Enviar mensaje",
+            locationLabel: "Ubicación",
+            availabilityLabel: "Disponibilidad",
             location: "Medellín, Colombia",
             remote: "Disponible para trabajo remoto"
         },
@@ -307,21 +361,21 @@ function changeLanguage(lang) {
 
     // Actualizar Experience
     if (sectionTitles[1]) sectionTitles[1].textContent = t.experience.title;
-    const expRole = document.querySelector('.experience-role');
-    const expCompany = document.querySelector('.experience-company-name');
-    const expStatus = document.querySelector('.experience-status');
-    const expPeriod = document.querySelector('.experience-period');
-    const expLocation = document.querySelector('.experience-location');
-    const expDesc = document.querySelector('.experience-desc');
-    if (expRole) expRole.textContent = t.experience.role;
-    if (expCompany) expCompany.innerHTML = `MAS Global Consulting &nbsp;·&nbsp; Microsoft Partner`;
-    if (expStatus) expStatus.textContent = t.experience.status;
-    if (expPeriod) expPeriod.innerHTML = `<i class="fas fa-calendar-alt"></i> ${t.experience.period}`;
-    if (expLocation) expLocation.innerHTML = `<i class="fas fa-map-marker-alt"></i> ${t.experience.location}`;
-    if (expDesc) expDesc.textContent = t.experience.desc;
-    const expListItems = document.querySelectorAll('.experience-list li');
-    const liKeys = ['li1','li2','li3','li4','li5'];
-    expListItems.forEach((li, i) => { if (liKeys[i]) li.textContent = t.experience[liKeys[i]]; });
+    document.querySelectorAll('.experience-item').forEach((card, i) => {
+        const item = t.experience.items[i];
+        if (!item) return;
+        const set = (sel, fn) => { const el = card.querySelector(sel); if (el) fn(el); };
+        set('.experience-role', el => { el.textContent = item.role; });
+        set('.experience-company-name', el => { el.innerHTML = item.company.replace(' · ', ' &nbsp;·&nbsp; '); });
+        set('.experience-period', el => { el.innerHTML = `<i class="fas fa-calendar-alt"></i> ${item.period}`; });
+        set('.experience-location', el => { el.innerHTML = `<i class="fas fa-map-marker-alt"></i> ${item.location}`; });
+        if (item.desc) set('.experience-desc', el => { el.textContent = item.desc; });
+        if (item.bullets) {
+            card.querySelectorAll('.experience-list li').forEach((li, j) => {
+                if (item.bullets[j]) li.textContent = item.bullets[j];
+            });
+        }
+    });
 
     // Actualizar Skills
     if (sectionTitles[2]) sectionTitles[2].textContent = t.skills.title;
@@ -379,9 +433,12 @@ function changeLanguage(lang) {
     if (submitBtn) submitBtn.textContent = t.contact.sendButton;
     
     // Actualizar contact methods (LinkedIn, location, remote)
-    const contactMethods = document.querySelectorAll('.contact-method span');
-    if (contactMethods[1]) contactMethods[1].textContent = t.contact.location;
-    if (contactMethods[2]) contactMethods[2].textContent = t.contact.remote;
+    const contactValues = document.querySelectorAll('.contact-method-value');
+    if (contactValues[2]) contactValues[2].textContent = t.contact.location;
+    if (contactValues[3]) contactValues[3].textContent = t.contact.remote;
+    const contactLabels = document.querySelectorAll('.contact-method-label');
+    if (contactLabels[2]) contactLabels[2].textContent = t.contact.locationLabel;
+    if (contactLabels[3]) contactLabels[3].textContent = t.contact.availabilityLabel;
     
     // Actualizar Footer
     const footerP = document.querySelector('.footer p');
